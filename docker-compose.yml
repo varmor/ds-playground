@@ -1,0 +1,13 @@
+version: '1'
+
+services:
+  jupyter:
+    image: jupyter-lab:latest
+    container_name: jupyter-lab-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"  
+    volumes:
+      - .:/app
